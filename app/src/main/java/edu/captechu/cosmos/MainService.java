@@ -57,8 +57,8 @@ public class MainService extends Service {
             @Override
             public void onChildAdded(DataSnapshot snapshot, String previousChildKey) {
 
-                if ((Integer.parseInt(snapshot.child("temp").getValue().toString()) < limit_temp_min ||
-                        Integer.parseInt(snapshot.child("temp").getValue().toString()) > limit_temp_max) &&
+                if ((Float.parseFloat(snapshot.child("temp").getValue().toString()) < limit_temp_min ||
+                        Float.parseFloat(snapshot.child("temp").getValue().toString()) > limit_temp_max) &&
                         snapshot.child("status").getValue().toString().equals("false")) {
                     Notification.Builder mBuilder =
                             new Notification.Builder(getBaseContext())
@@ -91,8 +91,8 @@ public class MainService extends Service {
 
                     changeStatus(snapshot.getRef().toString());
                 }
-                else if ((Integer.parseInt(snapshot.child("light").getValue().toString()) < limit_light_min ||
-                        Integer.parseInt(snapshot.child("light").getValue().toString()) > limit_light_max) &&
+                else if ((Float.parseFloat(snapshot.child("light").getValue().toString()) < limit_light_min ||
+                        Float.parseFloat(snapshot.child("light").getValue().toString()) > limit_light_max) &&
                         snapshot.child("status").getValue().toString().equals("false")) {
 
                     Notification.Builder mBuilder =
