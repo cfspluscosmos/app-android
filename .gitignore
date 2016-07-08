@@ -1,14 +1,4 @@
-<<<<<<< HEAD
-*.iml
-.gradle
-/local.properties
-/.idea/workspace.xml
-/.idea/libraries
-.DS_Store
-/build
-/captures
-/app/google-services.json
-=======
+
 # Built application files
 *.apk
 *.ap_
@@ -46,9 +36,9 @@ captures/
 # Intellij
 *.iml
 .idea/workspace.xml
+.idea/libraries
 
 # Keystore files
 *.jks
->>>>>>> 7c9f134e8476ce24cd198240b912edb695db79e8
-app/libs/
-libs/
+
+app/google-services.json
